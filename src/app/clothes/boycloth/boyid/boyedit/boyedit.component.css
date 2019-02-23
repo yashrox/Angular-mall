@@ -1,0 +1,10 @@
+.resize{
+    width : 40em;
+    margin: 2em auto ;
+    
+}
+
+label {
+    font-weight: bold;
+    color: red;
+}

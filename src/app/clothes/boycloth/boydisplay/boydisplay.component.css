@@ -1,0 +1,23 @@
+.card1 {
+  
+    margin-right: 0.5em;
+    height:   20em;
+    text-align: center;
+    
+    width : 20em;
+    margin-bottom: 0.5em;
+    
+}
+
+
+
+a{
+    cursor: pointer;
+    
+}
+
+.img1{
+    height: 9.5em;
+    /*width: em;*/
+}
+

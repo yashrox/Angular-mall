@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink = " ">ANGULAR MALL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink = "home">Home <span class="sr-only">(current)</span></a>
+      </li>
+    
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CLOTHES
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink = "boyscloth">BOYS</a>
+          <a class="dropdown-item" routerLink = "girlscloth">GIRLS</a>
+         </div>
+      </li>
+      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        SHOES
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">BOYS</a>
+          <a class="dropdown-item" href="#">GIRLS</a>
+          </div>
+      </li>
+      
+      
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" *ngIf = "boyser.isAuthenticated()" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        MANAGE DATA
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" (click) ="onsave()">SAVE DATA</a>
+          <a class="dropdown-item" (click) = "onget()">GET DATA</a>
+          </div>
+      </li>
+    
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a  class="nav-link nav-item" routerLink = "signin" *ngIf = "!boyser.isAuthenticated()"><i class="fa fa-sign-in"></i>LOGIN</a>  
+      <a class ="nav-link nav-item" routerLink = "register" *ngIf = "!boyser.isAuthenticated()"><i class="fa fa-sign-in"></i> SIGNUP</a>
+      <a class ="nav-link nav-item"   (click) = "logout()" *ngIf = "boyser.isAuthenticated()"><i class="fa fa-sign-out"></i> LOGOUT</a>
+    </form>
+  </div>
+</nav>

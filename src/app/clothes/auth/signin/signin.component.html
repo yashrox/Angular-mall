@@ -1,0 +1,32 @@
+
+<div class = " resize">
+<div class = "jumbotron">
+    <h1 class ="text-align : center">LOGIN</h1>
+<form #f = "ngForm" (ngSubmit) = "signin(f)" > 
+    
+    <div class = "form-group">
+        
+            <label>EMAIL </label>
+                <input type = "text" ngModel name ="mail" class ="form-control" required email #email>
+                <span clas="help-block" *ngIf = "!email.valid && email.touched"> 
+                PLEASE ENTER THE VALID EMAIL</span>
+            
+            
+        </div>
+
+
+    <div class = "form-group">
+        
+            <label>PASSWORD </label> 
+                <input type = "password" ngModel name ="password" required class ="form-control">
+            
+            </div>
+        
+    <div clas ="form-group">
+        <button type= "submit" class = "btn btn-primary" >LOGIN</button>
+        </div>
+    
+    </form>
+</div>
+</div>
+

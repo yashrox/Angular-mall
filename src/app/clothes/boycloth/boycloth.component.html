@@ -1,0 +1,34 @@
+<div class = "container">
+         
+         <div class = "row">
+             <div class = "cl-xs-12" style = "margin-left : 7em; height : 15em;">
+                 <div class = "jumbotron">
+                     <h1>WELCOME TO BOYS SECTION CLOTHES</h1>
+                     <hr>
+           
+                  
+                  <button class="btn btn-primary pull-right" [routerLink] = "['new']" (click) ="newval()" >ADD CLOTHES</button>
+                            
+                     </div>
+                 </div>
+             </div>
+         
+         <div>   
+         <label>SEARCH
+          <input type = "text" class ="form-control" name ="search" #f  ngModel placeholder = "search by brand" >
+              </label>
+              
+          </div>
+        <hr>    
+            
+            <div class = "row" >
+           
+         <app-boydisplay *ngFor = "let boyinfor of boyarr | filter : f.value ; let i = index; "
+            [data] = "boyinfor" [Index] = "i"  
+            ></app-boydisplay>
+           
+                 <router-outlet></router-outlet>
+            </div>
+            
+            
+    </div>

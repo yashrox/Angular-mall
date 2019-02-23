@@ -1,0 +1,24 @@
+<div class=" col-md-4 col-sm-6">
+<a>
+<div class = "card card1 ">
+
+<img [src] = "boydata.image" class ="img1 img-responsive">
+
+<h3 class ="card-title" style ="font-style: italic;"> {{ boydata.brand | uppercase}} </h3>
+<p class ="card-text"> {{ boydata.description | slice :0:30 }} </p>
+<h4 class ="card-title"> <i class="fa fa-inr"></i> {{boydata.price}} </h4>
+<a class="btn btn-success" [routerLink] = "['/boyscloth' , Index]" >SHOW MORE</a>
+
+</div>
+
+</a>  
+
+</div>
+
+
+
+
+
+
+
+
